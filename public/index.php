@@ -14,6 +14,6 @@ debug(Router::getRoutes());
 if(Router::matchRoute($query)) {
     debug(Router::getRoute());
 } else {
-    echo '404';
+    echo '404(';
 }
 
