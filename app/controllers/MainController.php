@@ -19,8 +19,13 @@ class  MainController extends AppController  {
 
         $posts = $model->findAll();
 
-        //debug($posts);
+        $post = $model->findOne(2);
 
+        $data = $model->findBySql("SELECT * FROM post ORDER by id DESC LIMIT 2");
+
+        $find = $model->findLike('There', 'text');
+
+        debug($find);
 
         $title = 'PAGE TITLE';
         
