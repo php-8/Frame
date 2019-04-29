@@ -1,9 +1,5 @@
 <div class="container">
 
-<button type="button" class="btn btn-outline-success" id="send">Кнопка</button>
-
-<br><br>
-
   <div class="row">
     <div class="col-sm-8">
     <!-- Col-sm-8 -->
@@ -28,21 +24,21 @@
 
   <ul class="list-unstyled">
   <li class="media">
-    <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/54/545cfc4004db6dfdd0a47cf3b9861be72c6d0fca_medium.jpg" class="mr-3" alt="...">
+    <img src="test.png" class="mr-3" alt="...">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media my-4">
-    <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/54/545cfc4004db6dfdd0a47cf3b9861be72c6d0fca_medium.jpg" class="mr-3" alt="...">
+    <img src="test.png" class="mr-3" alt="...">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
     </div>
   </li>
   <li class="media">
-    <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/54/545cfc4004db6dfdd0a47cf3b9861be72c6d0fca_medium.jpg" class="mr-3" alt="...">
+    <img src="main/test.png" class="mr-3" alt="...">
     <div class="media-body">
       <h5 class="mt-0 mb-1">List-based media object</h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -62,7 +58,7 @@
   </div>
   <div class="card-body">
 <?php
-foreach($posts as $k => $v) {
+foreach($data as $k => $v) {
     echo $v['title'];
     echo '<br><br>';
     echo $v['text'];
@@ -153,19 +149,3 @@ foreach($posts as $k => $v) {
   </div>
 </div>
 
-
-<script>
-$('#send').click(function() {
-  $.ajax({
-    url: 'main/test',
-    type: 'post',
-    data: {'id': 2},
-    success: function(res) {
-      console.log(res);
-    },
-    error: function() {
-      alert('Error!');
-    }
-  });
-});
-</script>

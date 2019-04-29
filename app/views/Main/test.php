@@ -1,2 +1,1 @@
-<code><?=__FILE__?></code>
-<?=$name?>
+<?php echo $test; ?>
