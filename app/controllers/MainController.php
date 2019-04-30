@@ -18,7 +18,7 @@ class  MainController extends AppController  {
 
         //App::$app->getList();
 
-        $model = new Main;
+        $model = new Main
 
         $posts = App::$app->cache->get('posts');
         if(!$posts) {
@@ -54,7 +54,10 @@ class  MainController extends AppController  {
     public function testAction() {
         
         if($this->isAjax()) {
-            echo 'AJAX';
+            $model = new Main;
+            $post = $model->findBySql("SELECT * FROM post WHERE id = {$_POST['id']} ORDER by id DESC");
+            //debug($post);
+            $this->loadView('_test', compact('post'));
             die;
         }
 
