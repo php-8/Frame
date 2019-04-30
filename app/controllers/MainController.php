@@ -18,7 +18,7 @@ class  MainController extends AppController  {
 
         //App::$app->getList();
 
-        $model = new Main
+        $model = new Main;
 
         $posts = App::$app->cache->get('posts');
         if(!$posts) {
