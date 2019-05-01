@@ -29,7 +29,7 @@
           <a class="nav-link" href="/fw/main/testview">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/fw/page/about">About</a>
+          <a class="nav-link" href="/fw/page/about">Test</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/fw/admin">Admin</a>
