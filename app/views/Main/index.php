@@ -65,7 +65,7 @@
 
   <ul class="list-unstyled">
   <li class="media">
-    <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/54/545cfc4004db6dfdd0a47cf3b9861be72c6d0fca_medium.jpg" class="mr-3" alt="...">
+    <img src="images/test.png" class="mr-3" alt="...">
     <div class="media-body">
     <h5 class="mt-0 mb-1"><a href = "...">List-based media object</a></h5>
       Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
@@ -154,7 +154,7 @@ foreach($posts as $k => $v) {
   <div class="inner"></div>
 
 
-
+<?php // new fw\widgets\Menu(); ?>
     <!-- end Col-sm-8 -->
     
 

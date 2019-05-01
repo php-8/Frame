@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <title><?=$title?></title>
+    <title></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sticky-footer-navbar/">
     <!-- Bootstrap core CSS -->
@@ -29,7 +29,10 @@
           <a class="nav-link" href="/fw/main/testview">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="/fw/page/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fw/admin">Admin</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>

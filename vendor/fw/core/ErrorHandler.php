@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\core;
+namespace fw\core;
 
 //define("DEBUG", 1);
 

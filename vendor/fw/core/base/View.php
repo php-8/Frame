@@ -1,5 +1,5 @@
 <?php
-namespace vendor\core\base;
+namespace fw\core\base;
 
 class View {
 
@@ -23,7 +23,7 @@ class View {
 
     public function render($vars) {
         extract($vars);
-        $file_view = APP . "/views/{$this->route['controller']}/{$this->view}.php";
+        $file_view = APP . "/views/{$this->route['prefix']}{$this->route['controller']}/{$this->view}.php";
         ob_start();
         if(is_file($file_view)) {
             require $file_view;
