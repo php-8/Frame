@@ -28,6 +28,15 @@
         <li class="nav-item active">
           <a class="nav-link" href="/fw/main/testview">Home <span class="sr-only">(current)</span></a>
         </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/fw/testuser/signup">TestSignup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fw/testuser/login">TestLogin</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/fw/main/logout">Logout</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/fw/page/about">Test</a>
         </li>
@@ -48,10 +57,9 @@
 
 <br><br><br>
 
-
 <?=$content?>
 
-
+<?php //session_destroy(); ?>
 <?php //debug(vendor\core\Db::$countSql) ?>
 
 <?php //debug(vendor\core\Db::$queries) ?>

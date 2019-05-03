@@ -1,5 +1,4 @@
 <?php
-// error_reporting(-1);
 
 use fw\core\Router;
 
@@ -16,6 +15,7 @@ define('LAYOUT', 'default');
 define('ADMIN', 'http://localhost/fw/admin');
 
 require '../vendor/fw/libs/functions.php';
+require '../vendor/fw/libs/rb.php';
 require __DIR__ . '/../vendor/autoload.php';
 
 // spl_autoload_register(function($class) {
@@ -25,14 +25,11 @@ require __DIR__ . '/../vendor/autoload.php';
 // }
 // });
 
-
-
 new \fw\core\App;
 
 Router::add('^page/(?P<action>[a-z-]+)/(?P<alias>[a-z-]+)?$', ['controller' => 'Page']);
 Router::add('^page/(?P<alias>[a-z-]+)?$', ['controller' => 'Page', 'action' => 'view']);
 
-// defaults routes
 Router::add('^admin$', ['controller' => 'Main', 'action' => 'index', 'prefix' => 'admin']);
 Router::add('^admin/?(?P<controller>[a-z-]+)/?(?P<action>[a-z-]+)?$', ['prefix' => 'admin']);
 

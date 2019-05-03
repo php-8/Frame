@@ -1,20 +1,20 @@
 <?php
+
 namespace app\models;
 
 use fw\core\base\Model;
 
-// use vendor\core\base\Model;
-
 class User extends Model {
+
     public $attributes = [
-        'login' => '',
+        'userlogin' => '',
         'password' => '',
         'email' => '',
         'name' => '',
     ];
     public $rules = [
         'required' => [
-            ['login'],
+            ['userlogin'],
             ['password'],
             ['email'],
             ['name'],
@@ -26,10 +26,13 @@ class User extends Model {
             ['password', 6],
         ]
     ];
+
     public function checkUnique(){
-        $user = \R::findOne('user', 'login = ? OR email = ? LIMIT 1', [$this->attributes['login'], $this->attributes['email']]);
+
+        $user = \R::findOne('user', 'userlogin = ? OR email = ? LIMIT 1', [$this->attributes['userlogin'], $this->attributes['email']]);
+        
         if($user){
-            if($user->login == $this->attributes['login']){
+            if($user->login == $this->attributes['userlogin']){
                 $this->errors['unique'][] = 'Этот логин уже занят';
             }
             if($user->email == $this->attributes['email']){
@@ -39,14 +42,16 @@ class User extends Model {
         }
         return true;
     }
+
+
     public function login($isAdmin = false){
-        $login = !empty(trim($_POST['login'])) ? trim($_POST['login']) : null;
+        $login = !empty(trim($_POST['userlogin'])) ? trim($_POST['userlogin']) : null;
         $password = !empty(trim($_POST['password'])) ? trim($_POST['password']) : null;
         if($login && $password){
             if($isAdmin){
-                $user = \R::findOne('user', "login = ? AND role = 'admin' LIMIT 1", [$login]);
+                $user = \R::findOne('user', "userlogin = ? AND role = 'admin' LIMIT 1", [$login]);
             }else{
-                $user = \R::findOne('user', 'login = ? LIMIT 1', [$login]);
+                $user = \R::findOne('user', 'userlogin = ? LIMIT 1', [$login]);
             }
             if($user){
                 if(password_verify($password, $user->password)){
@@ -59,6 +64,8 @@ class User extends Model {
         }
         return false;
     }
+
+
     public static function isAdmin(){
         return (isset($_SESSION['user']) && $_SESSION['user']['role'] == 'admin');
     }
